@@ -20,3 +20,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/services', 'ServicesController');
+
+Route::group(['as' => 'user.'], function() {
+    Route::any('/settings', ['as' => 'settings', 'uses' => 'ProfileController@viewSettings']);
+    Route::any('/profile/{userId}', ['as' => 'profile', 'uses' => 'ProfileController@viewProfile']);
+});

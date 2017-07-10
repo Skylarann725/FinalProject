@@ -1,0 +1,32 @@
+a.dropdown-toggle {
+    font-size: 15px;
+}
+.logout {
+    font-size: 13px;
+}
+.login {
+    font-size: 15px;
+}
+.control-label {
+    font-size: 15px;
+    font-weight: 150;
+    color: black;
+}
+.remember {
+    font-size: 15px;
+    font-weight: 100;
+    color: black;
+}
+#email {
+    font-size: 15px;
+}
+#password {
+    font-size: 15px;
+}
+.navbar {
+    margin-bottom: 0 !important;
+}
+.col-md-8 {
+    margin-top: 30px !important;
+}
+
