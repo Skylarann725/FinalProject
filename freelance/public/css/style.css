@@ -29,4 +29,10 @@ a.dropdown-toggle {
 .col-md-8 {
     margin-top: 30px !important;
 }
+.panel {
+    margin-top: 25px;
+}
+.profcontainer {
+    margin-top: 25px;
+}
 

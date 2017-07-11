@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{URL::asset('css/style.css')}}">
-    {!! MaterializeCSS::include_full() !!}
+    {{--{!! MaterializeCSS::include_full() !!}--}}
 <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    {{--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">--}}
 
     <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>--}}
     <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 
     <!-- CSRF Token -->
@@ -60,6 +60,8 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+                                    <li><a class="profile" href="{{ url('/profile/'.Auth::user()->id) }}">Profile</a></li>
+                                    <li><a class="settings" href="{{ url('/settings') }}">Settings</a></li>
                                     <li>
                                         <a class="logout" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();

@@ -14,8 +14,11 @@ class UpdateUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function(Blueprint $t) {
-            $t->string('profile_image_url');
+            $t->longText('profile_image_url');
+            $t->string('first_name');
+            $t->string('last_initial');
             $t->string('profile_title');
+            $t->integer('hourly_amount');
             $t->string('location_city');
             $t->string('location_state');
             $t->string('skills');
