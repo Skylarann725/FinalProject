@@ -11,18 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ServicesController@index');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'ServicesController@index')->name('home');
 
 Route::resource('/services', 'ServicesController');
 
 Route::group(['as' => 'user.'], function() {
     Route::get('/settings', ['as' => 'settings', 'uses' => 'ProfileController@viewSettings']);
-    Route::post('/settings', ['as' => 'settings', 'uses' => 'ProfileController@saveSettings']);
+    Route::post('/settings', ['as' => 'settings', 'uses' => 'ProfileController@viewSettings']);
     Route::any('/profile/{userId}', ['as' => 'profile', 'uses' => 'ProfileController@viewProfile']);
 });

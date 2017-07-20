@@ -15,6 +15,7 @@ class UpdateUsersTable extends Migration
     {
         Schema::table('users', function(Blueprint $t) {
             $t->longText('profile_image_url');
+            $t->longText('profile_upload_url');
             $t->string('first_name');
             $t->string('last_initial');
             $t->string('profile_title');

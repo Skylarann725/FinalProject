@@ -4,12 +4,23 @@
     <div class="container">
         <div class="panel panel-default">
             <div class="panel-body">
-                {!! Form::open(['action' => 'ProfileController@saveSettings']) !!}
+                {!! Form::open(['action' => 'ProfileController@saveSettings', 'files' => true]) !!}
                 <h3>Edit Info</h3>
                 <div class="form-group">
-                    {!! Form::label('profile_image_url', 'Profile Image') !!}
-                    {!! Form::text('profile_image_url', $user->profile_image_url, ['class' => 'form-control']) !!}
+                        {!! Form::label('file-upload', 'Profile Picture', ['class' => 'custom-file-upload']) !!}
+                        {!! Form::input('file', 'profile_image_upload', $user->profile_image_url, ['class' => 'form-control', 'id' => 'file-upload']) !!}
                 </div>
+                {{--<form action="#">--}}
+                    {{--<div class="file-field input-field">--}}
+                        {{--<div class="btn">--}}
+                            {{--<span>File</span>--}}
+                            {{--<input type="file">--}}
+                        {{--</div>--}}
+                        {{--<div class="file-path-wrapper">--}}
+                            {{--<input class="file-path validate" type="text">--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</form>--}} {{--For Materialize--}}
                 <div class="form-group">
                     {!! Form::label('first_name', 'First Name') !!}
                     {!! Form::text('first_name', $user->first_name, ['class' => 'form-control']) !!}
@@ -20,7 +31,7 @@
                 </div>
                 <div class="form-group">
                     {!! Form::label('profile_title', 'Job Title') !!}
-                    {!! Form::text('profile_title', $user->profile_title, ['class' => 'form-control']) !!}
+                    {!! Form::select('profile_title', ['Web Development' => 'Web Development', 'Video Production' => 'Video Production'], $user->profile_title, ['class' => 'form-control']) !!}
                 </div>
                 <div class="form-group">
                     {!! Form::label('hourly_amount', 'Hourly Amount') !!}

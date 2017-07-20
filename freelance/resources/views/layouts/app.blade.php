@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{URL::asset('css/style.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Lora" rel="stylesheet">
     {{--{!! MaterializeCSS::include_full() !!}--}}
 <!-- Compiled and minified CSS -->
     {{--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">--}}
@@ -36,9 +37,10 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="{{ url('/services') }}">
                         {{ config('app.name', 'GetPaid') }}
                     </a>
+                    {{--<a class="navbar-brand" id="services-tab" href="{{ url('/services') }}">Services</a>--}}
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -82,6 +84,9 @@
         </nav>
 
         @yield('content')
+    </div>
+    <div class="footer">
+        <h5>@ 2017 Copyright GetPaid</h5>
     </div>
 
     <!-- Scripts -->

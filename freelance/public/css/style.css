@@ -1,3 +1,6 @@
+a.navbar-brand {
+    color: green !important;
+}
 a.dropdown-toggle {
     font-size: 15px;
 }
@@ -33,6 +36,54 @@ a.dropdown-toggle {
     margin-top: 25px;
 }
 .profcontainer {
-    margin-top: 25px;
+    margin-top: 50px;
+    border: solid lightgray 1px;
+    padding: 40px;
+    background-color: white;
+    width: 75%;
 }
+
+#services-tab {
+    font-size: 15px;
+    color: #777 !important;
+}
+#services {
+    margin-left: 150px;
+}
+.main-pic {
+    background-color: black;
+    opacity: .8;
+}
+#search {
+    margin-top: -300px;
+    margin-left: 450px !important;
+}
+h1 {
+    margin-top: 300px !important;
+}
+.how-section {
+    height: 400px;
+}
+h2 {
+    text-align: center;
+}
+.proftitle{
+    text-align: left;
+    font-family: 'Droid Serif', serif;
+}
+p {
+    font-family: 'Lora', serif !important;
+    font-size: 15px;
+}
+.footer {
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+}
+h5 {
+    margin-bottom: 20px !important;
+    text-align: center;
+}
+
+
 
