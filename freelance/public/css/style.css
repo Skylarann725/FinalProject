@@ -1,5 +1,9 @@
 a.navbar-brand {
     color: green !important;
+    font-family: 'Galada', cursive;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 6px;
 }
 a.dropdown-toggle {
     font-size: 15px;
@@ -12,7 +16,7 @@ a.dropdown-toggle {
 }
 .control-label {
     font-size: 15px;
-    font-weight: 150;
+    font-weight: 100;
     color: black;
 }
 .remember {
@@ -42,13 +46,21 @@ a.dropdown-toggle {
     background-color: white;
     width: 75%;
 }
-
+.servpics {
+    color: black;
+    text-align: center;
+}
+.servpics:hover,
+.servpics:active {
+    color: green;
+}
 #services-tab {
     font-size: 15px;
     color: #777 !important;
 }
 #services {
-    margin-left: 150px;
+    padding-left: 50px;
+    width: 100%;
 }
 .main-pic {
     background-color: black;
@@ -58,31 +70,62 @@ a.dropdown-toggle {
     margin-top: -300px;
     margin-left: 450px !important;
 }
-h1 {
-    margin-top: 300px !important;
+#search-input {
+    height: 50px;
+}
+#search-btn {
+    line-height: 2.6em;
+    color: green;
 }
 .how-section {
-    height: 400px;
+    height: 440px;
+    padding-top: 20px;
 }
-h2 {
+#how {
+    /*margin-left: 250px;*/
     text-align: center;
+    padding-top: 30px;
+}
+#hire {
+    padding-right: 0;
 }
 .proftitle{
     text-align: left;
     font-family: 'Droid Serif', serif;
 }
-p {
-    font-family: 'Lora', serif !important;
-    font-size: 15px;
-}
 .footer {
     height: 50px;
     width: 100%;
     bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    color: green;
+    position: relative;
+}
+h1 {
+    margin-top: 300px !important;
+}
+h2 {
+    text-align: center;
+    color: green !important;
 }
 h5 {
     margin-bottom: 20px !important;
     text-align: center;
+}
+p {
+    font-family: 'Lora', serif !important;
+    font-size: 15px;
+}
+.test {
+    height: 200px;
+}
+.test2 {
+    height: 500px;
+}
+#subs {
+    height: 500px;
+    padding-top: 60px;
 }
 
 

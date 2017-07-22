@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{URL::asset('css/style.css')}}">
-    <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Lora" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Lora|Galada" rel="stylesheet">
     {{--{!! MaterializeCSS::include_full() !!}--}}
 <!-- Compiled and minified CSS -->
     {{--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">--}}
@@ -57,7 +57,7 @@
                             <li><a class="login" href="{{ route('register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color:green">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 

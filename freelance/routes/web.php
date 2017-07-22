@@ -19,8 +19,10 @@ Route::get('/home', 'ServicesController@index')->name('home');
 
 Route::resource('/services', 'ServicesController');
 
+Route::get('/webdev', 'WebDevController@webdev');
+
 Route::group(['as' => 'user.'], function() {
     Route::get('/settings', ['as' => 'settings', 'uses' => 'ProfileController@viewSettings']);
-    Route::post('/settings', ['as' => 'settings', 'uses' => 'ProfileController@viewSettings']);
+    Route::post('/settings', ['as' => 'settings', 'uses' => 'ProfileController@saveSettings']);
     Route::any('/profile/{userId}', ['as' => 'profile', 'uses' => 'ProfileController@viewProfile']);
 });

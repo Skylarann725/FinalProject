@@ -38,4 +38,5 @@
             {{--<h1>{{$user->name}}</h1>--}}
         </div>
     </div>
+    <div class="test2"></div>
 @endsection
