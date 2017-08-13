@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{URL::asset('css/style.css')}}">
-    <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Lora|Galada" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Lora|Galada|Dancing+Script" rel="stylesheet">
     {{--{!! MaterializeCSS::include_full() !!}--}}
 <!-- Compiled and minified CSS -->
     {{--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">--}}
@@ -41,6 +41,16 @@
                         {{ config('app.name', 'GetPaid') }}
                     </a>
                     {{--<a class="navbar-brand" id="services-tab" href="{{ url('/services') }}">Services</a>--}}
+                    <div class="row" id="search">
+                    <div class="col-lg-6">
+                    <div class="input-group">
+                    <input type="text" class="form-control" id="search-input" placeholder="What services are you looking for?">
+                    <span class="input-group-btn">
+                    <button class="btn btn-default" id="search-btn" type="button">Search</button>
+                    </span>
+                    </div><!-- /input-group -->
+                    </div><!-- /.col-lg-6 -->
+                    </div><!-- /.row -->
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">

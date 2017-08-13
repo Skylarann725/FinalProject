@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\services;
+use App\editing;
 use Illuminate\Http\Request;
-use App\webdev;
-use Illuminate\Support\Facades\DB;
 
-class ServicesController extends Controller
+class EditingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +14,8 @@ class ServicesController extends Controller
      */
     public function index()
     {
-        return view('services.index', ['services' => services::all()]);
+        return view('services.editing', ['editing' => editing::all()]);
+
     }
 
     /**
@@ -37,32 +36,32 @@ class ServicesController extends Controller
      */
     public function store(Request $request)
     {
-        $new = new services();
+        $new = new editing();
         $new->name = $request->get('name');
         $new->save();
 
-        return redirect(route('services.index'));
+        return redirect(route('services.editing'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\services  $services
+     * @param  \App\editing  $editing
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(editing $editing)
     {
-        $services = services::find($id);
-        return view('services.show', ['services' => $services]);
+        $editing = editing::find($id);
+        return view('services.editing', ['editing' => $editing]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\services  $services
+     * @param  \App\editing  $editing
      * @return \Illuminate\Http\Response
      */
-    public function edit(services $services)
+    public function edit(editing $editing)
     {
         //
     }
@@ -71,10 +70,10 @@ class ServicesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\services  $services
+     * @param  \App\editing  $editing
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, services $services)
+    public function update(Request $request, editing $editing)
     {
         //
     }
@@ -82,10 +81,10 @@ class ServicesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\services  $services
+     * @param  \App\editing  $editing
      * @return \Illuminate\Http\Response
      */
-    public function destroy(services $services)
+    public function destroy(editing $editing)
     {
         //
     }

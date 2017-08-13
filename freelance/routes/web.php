@@ -18,8 +18,13 @@ Auth::routes();
 Route::get('/home', 'ServicesController@index')->name('home');
 
 Route::resource('/services', 'ServicesController');
-
-Route::get('/webdev', 'WebDevController@webdev');
+Route::resource('/programming', 'ProgrammingController');
+Route::resource('/videopro', 'VideoProController');
+Route::resource('/business', 'BusinessController');
+Route::resource('/photography', 'PhotographyController');
+Route::resource('/ecommerce', 'EcommerceController');
+Route::resource('/mobileapp', 'MobileAppController');
+Route::resource('/editing', 'EditingController');
 
 Route::group(['as' => 'user.'], function() {
     Route::get('/settings', ['as' => 'settings', 'uses' => 'ProfileController@viewSettings']);

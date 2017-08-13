@@ -31,7 +31,8 @@
                 </div>
                 <div class="form-group">
                     {!! Form::label('profile_title', 'Job Title') !!}
-                    {!! Form::select('profile_title', ['Web Development' => 'Web Development', 'Video Production' => 'Video Production'], $user->profile_title, ['class' => 'form-control']) !!}
+                    {!! Form::select('profile_title', ['Web Development' => 'Web Development', 'Video Production' => 'Video Production', 'Business' => 'Business', 'Photography' => 'Photography', 'Writers' => 'Writer'],
+                    $user->profile_title, ['class' => 'form-control']) !!}
                 </div>
                 <div class="form-group">
                     {!! Form::label('hourly_amount', 'Hourly Amount') !!}

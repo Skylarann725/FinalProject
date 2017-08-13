@@ -2,26 +2,65 @@
 
 @section('content')
     <div class="main-pic">
-    <img src="{{URL::asset('img/work.jpg')}}" alt="profile Pic" height="500" width="1280">
+    <img src="{{URL::asset('img/work.jpg')}}" class="coverpic" alt="profile Pic" height="500" width="100%">
     </div>
-        <div class="row" id="search">
-            <div class="col-lg-6">
-                <div class="input-group">
-                    <input type="text" class="form-control" id="search-input" placeholder="What services are you looking for?">
-                    <span class="input-group-btn">
-                    <button class="btn btn-default" id="search-btn" type="button">Search</button>
-                    </span>
-                </div><!-- /input-group -->
-            </div><!-- /.col-lg-6 -->
-        </div><!-- /.row -->
-    <h1></h1>
+        {{--<div class="row" id="search">--}}
+            {{--<div class="col-lg-6">--}}
+                {{--<div class="input-group">--}}
+                    {{--<input type="text" class="form-control" id="search-input" placeholder="What services are you looking for?">--}}
+                    {{--<span class="input-group-btn">--}}
+                    {{--<button class="btn btn-default" id="search-btn" type="button">Search</button>--}}
+                    {{--</span>--}}
+                {{--</div><!-- /input-group -->--}}
+            {{--</div><!-- /.col-lg-6 -->--}}
+        {{--</div><!-- /.row -->--}}
+    <div class="container">
+    <h3 class="title">Promote your passions.<br>Get paid to do what you love.</h3>
+    </div>
+    {{--<h1></h1>--}}
     <div class="row" id="services">
     @foreach($services as $serv)
             <div class="col-sm-2">
-                <a class="servpics" href="{{route('services.show', ['id' => $serv->id])}}">
-                    <img src="{{$serv->photo}}" width="180" height="130">
-                    <p>{{$serv->name}}</p>
+                <a class="servpics" href="{{ route('services.show', ['id' => $serv->id]) }}">
+                <img src="{{$serv->photo}}" width="180" height="130">
+                <p>{{$serv->name}}</p>
                 </a>
+                {{--@if($serv->id === 1)--}}
+                {{--<a class="servpics" href="{{ url('/webdev') }}">--}}
+                    {{--<img src="{{$serv->photo}}" width="180" height="130">--}}
+                    {{--<p>{{$serv->name}}</p>--}}
+                {{--</a>--}}
+                    {{--@endif--}}
+                    {{--@if($serv->id === 2)--}}
+                        {{--<a class="servpics" href="{{ url('/videopro') }}">--}}
+                            {{--<img src="{{$serv->photo}}" width="180" height="130">--}}
+                            {{--<p>{{$serv->name}}</p>--}}
+                        {{--</a>--}}
+                    {{--@endif--}}
+                    {{--@if($serv->id === 3)--}}
+                        {{--<a class="servpics" href="{{ url('/business') }}">--}}
+                            {{--<img src="{{$serv->photo}}" width="180" height="130">--}}
+                            {{--<p>{{$serv->name}}</p>--}}
+                        {{--</a>--}}
+                    {{--@endif--}}
+                    {{--@if($serv->id === 4)--}}
+                        {{--<a class="servpics" href="{{ url('/photography') }}">--}}
+                            {{--<img src="{{$serv->photo}}" width="180" height="130">--}}
+                            {{--<p>{{$serv->name}}</p>--}}
+                        {{--</a>--}}
+                    {{--@endif--}}
+                    {{--@if($serv->id === 5)--}}
+                        {{--<a class="servpics" href="{{ url('/videopro') }}">--}}
+                            {{--<img src="{{$serv->photo}}" width="180" height="130">--}}
+                            {{--<p>{{$serv->name}}</p>--}}
+                        {{--</a>--}}
+                    {{--@endif--}}
+                    {{--@if($serv->id === 6)--}}
+                        {{--<a class="servpics" href="{{ url('/videopro') }}">--}}
+                            {{--<img src="{{$serv->photo}}" width="180" height="130">--}}
+                            {{--<p>{{$serv->name}}</p>--}}
+                        {{--</a>--}}
+                    {{--@endif--}}
             </div>
     @endforeach
     </div>

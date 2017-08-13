@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\services;
+use App\musicvid;
 use Illuminate\Http\Request;
-use App\webdev;
-use Illuminate\Support\Facades\DB;
 
-class ServicesController extends Controller
+class MusicVidController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +14,7 @@ class ServicesController extends Controller
      */
     public function index()
     {
-        return view('services.index', ['services' => services::all()]);
+        //
     }
 
     /**
@@ -37,32 +35,27 @@ class ServicesController extends Controller
      */
     public function store(Request $request)
     {
-        $new = new services();
-        $new->name = $request->get('name');
-        $new->save();
-
-        return redirect(route('services.index'));
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\services  $services
+     * @param  \App\musicvid  $musicvid
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(musicvid $musicvid)
     {
-        $services = services::find($id);
-        return view('services.show', ['services' => $services]);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\services  $services
+     * @param  \App\musicvid  $musicvid
      * @return \Illuminate\Http\Response
      */
-    public function edit(services $services)
+    public function edit(musicvid $musicvid)
     {
         //
     }
@@ -71,10 +64,10 @@ class ServicesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\services  $services
+     * @param  \App\musicvid  $musicvid
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, services $services)
+    public function update(Request $request, musicvid $musicvid)
     {
         //
     }
@@ -82,10 +75,10 @@ class ServicesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\services  $services
+     * @param  \App\musicvid  $musicvid
      * @return \Illuminate\Http\Response
      */
-    public function destroy(services $services)
+    public function destroy(musicvid $musicvid)
     {
         //
     }
