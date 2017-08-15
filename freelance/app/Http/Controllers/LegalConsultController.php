@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\musicvid;
+use App\legalconsult;
 use Illuminate\Http\Request;
 
-class MusicVidController extends Controller
+class LegalConsultController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class MusicVidController extends Controller
      */
     public function index()
     {
-        return view('services.musicvid', ['musicvid' => musicvid::all()]);
+        return view('services.legalconsult', ['legalconsult' => legalconsult::all()]);
+
     }
 
     /**
@@ -35,32 +36,32 @@ class MusicVidController extends Controller
      */
     public function store(Request $request)
     {
-        $new = new musicvid();
+        $new = new legalconsult();
         $new->name = $request->get('name');
         $new->save();
 
-        return redirect(route('services.musicvid'));
+        return redirect(route('services.legalconsult'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\musicvid  $musicvid
+     * @param  \App\legalconsult  $legalconsult
      * @return \Illuminate\Http\Response
      */
-    public function show(musicvid $musicvid)
+    public function show(legalconsult $legalconsult)
     {
-        $musicvid = musicvid::find($id);
-        return view('services.musicvid', ['musicvid' => $musicvid]);
+        $legalconsult = legalconsult::find($id);
+        return view('services.legalconsult', ['legalconsult' => $legalconsult]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\musicvid  $musicvid
+     * @param  \App\legalconsult  $legalconsult
      * @return \Illuminate\Http\Response
      */
-    public function edit(musicvid $musicvid)
+    public function edit(legalconsult $legalconsult)
     {
         //
     }
@@ -69,10 +70,10 @@ class MusicVidController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\musicvid  $musicvid
+     * @param  \App\legalconsult  $legalconsult
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, musicvid $musicvid)
+    public function update(Request $request, legalconsult $legalconsult)
     {
         //
     }
@@ -80,10 +81,10 @@ class MusicVidController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\musicvid  $musicvid
+     * @param  \App\legalconsult  $legalconsult
      * @return \Illuminate\Http\Response
      */
-    public function destroy(musicvid $musicvid)
+    public function destroy(legalconsult $legalconsult)
     {
         //
     }

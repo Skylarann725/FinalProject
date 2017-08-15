@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Business;
+use App\underwaterphoto;
 use Illuminate\Http\Request;
 
-class BusinessController extends Controller
+class UnderwaterPhotoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class BusinessController extends Controller
      */
     public function index()
     {
-        return view('services.business', ['business' => business::all()]);
+        return view('services.underwaterphoto', ['underwaterphoto' => underwaterphoto::all()]);
+
     }
 
     /**
@@ -35,32 +36,32 @@ class BusinessController extends Controller
      */
     public function store(Request $request)
     {
-        $new = new business();
+        $new = new underwaterphoto();
         $new->name = $request->get('name');
         $new->save();
 
-        return redirect(route('services.business'));
+        return redirect(route('services.underwaterphoto'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Business  $business
+     * @param  \App\underwaterphoto  $underwaterphoto
      * @return \Illuminate\Http\Response
      */
-    public function show(Business $business)
+    public function show(underwaterphoto $underwaterphoto)
     {
-        $business = business::find($id);
-        return view('services.business', ['business' => $business]);
+        $underwaterphoto = underwaterphoto::find($id);
+        return view('services.underwaterphoto', ['underwaterphoto' => $underwaterphoto]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Business  $business
+     * @param  \App\underwaterphoto  $underwaterphoto
      * @return \Illuminate\Http\Response
      */
-    public function edit(Business $business)
+    public function edit(underwaterphoto $underwaterphoto)
     {
         //
     }
@@ -69,10 +70,10 @@ class BusinessController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Business  $business
+     * @param  \App\underwaterphoto  $underwaterphoto
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Business $business)
+    public function update(Request $request, underwaterphoto $underwaterphoto)
     {
         //
     }
@@ -80,10 +81,10 @@ class BusinessController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Business  $business
+     * @param  \App\underwaterphoto  $underwaterphoto
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Business $business)
+    public function destroy(underwaterphoto $underwaterphoto)
     {
         //
     }

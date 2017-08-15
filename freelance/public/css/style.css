@@ -140,8 +140,14 @@ p {
     height: 500px;
 }
 #subs {
-    height: 500px;
     padding-top: 60px;
+}
+#subs2 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+#subs3 {
+    padding-bottom: 60px;
 }
 
 

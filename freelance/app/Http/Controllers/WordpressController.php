@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\musicvid;
+use App\wordpress;
 use Illuminate\Http\Request;
 
-class MusicVidController extends Controller
+class WordpressController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class MusicVidController extends Controller
      */
     public function index()
     {
-        return view('services.musicvid', ['musicvid' => musicvid::all()]);
+        return view('services.wordpress', ['wordpress' => wordpress::all()]);
+
     }
 
     /**
@@ -35,32 +36,32 @@ class MusicVidController extends Controller
      */
     public function store(Request $request)
     {
-        $new = new musicvid();
+        $new = new wordpress();
         $new->name = $request->get('name');
         $new->save();
 
-        return redirect(route('services.musicvid'));
+        return redirect(route('services.wordpress'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\musicvid  $musicvid
+     * @param  \App\wordpress  $wordpress
      * @return \Illuminate\Http\Response
      */
-    public function show(musicvid $musicvid)
+    public function show(wordpress $wordpress)
     {
-        $musicvid = musicvid::find($id);
-        return view('services.musicvid', ['musicvid' => $musicvid]);
+        $wordpress = wordpress::find($id);
+        return view('services.wordpress', ['wordpress' => $wordpress]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\musicvid  $musicvid
+     * @param  \App\wordpress  $wordpress
      * @return \Illuminate\Http\Response
      */
-    public function edit(musicvid $musicvid)
+    public function edit(wordpress $wordpress)
     {
         //
     }
@@ -69,10 +70,10 @@ class MusicVidController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\musicvid  $musicvid
+     * @param  \App\wordpress  $wordpress
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, musicvid $musicvid)
+    public function update(Request $request, wordpress $wordpress)
     {
         //
     }
@@ -80,10 +81,10 @@ class MusicVidController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\musicvid  $musicvid
+     * @param  \App\wordpress  $wordpress
      * @return \Illuminate\Http\Response
      */
-    public function destroy(musicvid $musicvid)
+    public function destroy(wordpress $wordpress)
     {
         //
     }

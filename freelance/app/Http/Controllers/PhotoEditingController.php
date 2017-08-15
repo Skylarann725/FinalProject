@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\musicvid;
+use App\photoediting;
 use Illuminate\Http\Request;
 
-class MusicVidController extends Controller
+class PhotoEditingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class MusicVidController extends Controller
      */
     public function index()
     {
-        return view('services.musicvid', ['musicvid' => musicvid::all()]);
+        return view('services.photoediting', ['photoediting' => photoediting::all()]);
+
     }
 
     /**
@@ -35,32 +36,32 @@ class MusicVidController extends Controller
      */
     public function store(Request $request)
     {
-        $new = new musicvid();
+        $new = new photoediting();
         $new->name = $request->get('name');
         $new->save();
 
-        return redirect(route('services.musicvid'));
+        return redirect(route('services.photoediting'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\musicvid  $musicvid
+     * @param  \App\photoediting  $photoediting
      * @return \Illuminate\Http\Response
      */
-    public function show(musicvid $musicvid)
+    public function show(photoediting $photoediting)
     {
-        $musicvid = musicvid::find($id);
-        return view('services.musicvid', ['musicvid' => $musicvid]);
+        $photoediting = photoediting::find($id);
+        return view('services.photoediting', ['photoediting' => $photoediting]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\musicvid  $musicvid
+     * @param  \App\photoediting  $photoediting
      * @return \Illuminate\Http\Response
      */
-    public function edit(musicvid $musicvid)
+    public function edit(photoediting $photoediting)
     {
         //
     }
@@ -69,10 +70,10 @@ class MusicVidController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\musicvid  $musicvid
+     * @param  \App\photoediting  $photoediting
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, musicvid $musicvid)
+    public function update(Request $request, photoediting $photoediting)
     {
         //
     }
@@ -80,10 +81,10 @@ class MusicVidController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\musicvid  $musicvid
+     * @param  \App\photoediting  $photoediting
      * @return \Illuminate\Http\Response
      */
-    public function destroy(musicvid $musicvid)
+    public function destroy(photoediting $photoediting)
     {
         //
     }

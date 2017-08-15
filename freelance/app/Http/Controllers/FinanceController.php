@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\musicvid;
+use App\finance;
 use Illuminate\Http\Request;
 
-class MusicVidController extends Controller
+class FinanceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class MusicVidController extends Controller
      */
     public function index()
     {
-        return view('services.musicvid', ['musicvid' => musicvid::all()]);
+        return view('services.finance', ['finance' => finance::all()]);
     }
 
     /**
@@ -35,32 +35,32 @@ class MusicVidController extends Controller
      */
     public function store(Request $request)
     {
-        $new = new musicvid();
+        $new = new finance();
         $new->name = $request->get('name');
         $new->save();
 
-        return redirect(route('services.musicvid'));
+        return redirect(route('services.finance'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\musicvid  $musicvid
+     * @param  \App\finance  $finance
      * @return \Illuminate\Http\Response
      */
-    public function show(musicvid $musicvid)
+    public function show(finance $finance)
     {
-        $musicvid = musicvid::find($id);
-        return view('services.musicvid', ['musicvid' => $musicvid]);
+        $finance = finance::find($id);
+        return view('services.finance', ['finance' => $finance]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\musicvid  $musicvid
+     * @param  \App\finance  $finance
      * @return \Illuminate\Http\Response
      */
-    public function edit(musicvid $musicvid)
+    public function edit(finance $finance)
     {
         //
     }
@@ -69,10 +69,10 @@ class MusicVidController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\musicvid  $musicvid
+     * @param  \App\finance  $finance
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, musicvid $musicvid)
+    public function update(Request $request, finance $finance)
     {
         //
     }
@@ -80,10 +80,10 @@ class MusicVidController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\musicvid  $musicvid
+     * @param  \App\finance  $finance
      * @return \Illuminate\Http\Response
      */
-    public function destroy(musicvid $musicvid)
+    public function destroy(finance $finance)
     {
         //
     }

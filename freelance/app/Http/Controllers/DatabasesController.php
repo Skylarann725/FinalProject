@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\musicvid;
+use App\databases;
 use Illuminate\Http\Request;
 
-class MusicVidController extends Controller
+class DatabasesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class MusicVidController extends Controller
      */
     public function index()
     {
-        return view('services.musicvid', ['musicvid' => musicvid::all()]);
+        return view('services.databases', ['databases' => databases::all()]);
+
     }
 
     /**
@@ -35,32 +36,32 @@ class MusicVidController extends Controller
      */
     public function store(Request $request)
     {
-        $new = new musicvid();
+        $new = new databases();
         $new->name = $request->get('name');
         $new->save();
 
-        return redirect(route('services.musicvid'));
+        return redirect(route('services.databases'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\musicvid  $musicvid
+     * @param  \App\databases  $databases
      * @return \Illuminate\Http\Response
      */
-    public function show(musicvid $musicvid)
+    public function show(databases $databases)
     {
-        $musicvid = musicvid::find($id);
-        return view('services.musicvid', ['musicvid' => $musicvid]);
+        $databases = databases::find($id);
+        return view('services.databases', ['databases' => $databases]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\musicvid  $musicvid
+     * @param  \App\databases  $databases
      * @return \Illuminate\Http\Response
      */
-    public function edit(musicvid $musicvid)
+    public function edit(databases $databases)
     {
         //
     }
@@ -69,10 +70,10 @@ class MusicVidController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\musicvid  $musicvid
+     * @param  \App\databases  $databases
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, musicvid $musicvid)
+    public function update(Request $request, databases $databases)
     {
         //
     }
@@ -80,10 +81,10 @@ class MusicVidController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\musicvid  $musicvid
+     * @param  \App\databases  $databases
      * @return \Illuminate\Http\Response
      */
-    public function destroy(musicvid $musicvid)
+    public function destroy(databases $databases)
     {
         //
     }

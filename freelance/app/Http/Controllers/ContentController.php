@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Photography;
+use App\content;
 use Illuminate\Http\Request;
 
-class PhotographyController extends Controller
+class ContentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class PhotographyController extends Controller
      */
     public function index()
     {
-        return view('services.photography', ['photography' => photography::all()]);
+        return view('services.content', ['content' => content::all()]);
+
     }
 
     /**
@@ -35,32 +36,32 @@ class PhotographyController extends Controller
      */
     public function store(Request $request)
     {
-        $new = new photography();
+        $new = new content();
         $new->name = $request->get('name');
         $new->save();
 
-        return redirect(route('services.photography'));
+        return redirect(route('services.content'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Photography  $photography
+     * @param  \App\content  $content
      * @return \Illuminate\Http\Response
      */
-    public function show(Photography $photography)
+    public function show(content $content)
     {
-        $photography = photography::find($id);
-        return view('services.photography', ['photography' => $photography]);
+        $content = content::find($id);
+        return view('services.content', ['content' => $content]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Photography  $photography
+     * @param  \App\content  $content
      * @return \Illuminate\Http\Response
      */
-    public function edit(Photography $photography)
+    public function edit(content $content)
     {
         //
     }
@@ -69,10 +70,10 @@ class PhotographyController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Photography  $photography
+     * @param  \App\content  $content
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Photography $photography)
+    public function update(Request $request, content $content)
     {
         //
     }
@@ -80,10 +81,10 @@ class PhotographyController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Photography  $photography
+     * @param  \App\content  $content
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Photography $photography)
+    public function destroy(content $content)
     {
         //
     }
