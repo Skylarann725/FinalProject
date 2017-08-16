@@ -43,11 +43,24 @@ a.dropdown-toggle {
     margin-top: 25px;
 }
 .profcontainer {
-    margin-top: 50px;
+    margin-top: 20px;
     border: solid lightgray 1px;
     padding: 40px;
     background-color: white;
-    width: 75%;
+    width: 100%;
+}
+.contactcontainer {
+    background-color: white;
+    height: 300px;
+    width: 100%;
+    margin-top: 50px;
+    border: solid lightgray 1px;
+}
+.col-md-offset-1 {
+    margin-left: 0 !important;
+}
+.col-md-10 {
+    width: 67% !important;
 }
 .servpics {
     color: black;
@@ -94,7 +107,7 @@ a.dropdown-toggle {
     color: green;
 }
 .how-section {
-    height: 440px;
+    height: 500px;
     padding-top: 20px;
 }
 #how {
@@ -105,9 +118,47 @@ a.dropdown-toggle {
 #hire {
     padding-right: 0;
 }
+.profile {
+    color: black;
+    font-family: 'Droid+Serif', serif;
+}
+.profimage {
+    vertical-align: middle;
+}
+.proftitlemain{
+    text-align: left;
+    font-family: 'Droid+Serif', serif;
+    margin-top: 0;
+    color: black;
+    font-size: 45px;
+}
 .proftitle{
     text-align: left;
-    font-family: 'Droid Serif', serif;
+    font-family: 'Droid+Serif', serif;
+    margin-top: 0;
+    color: black;
+}
+.profcontact {
+    text-align: center;
+    color: black;
+    font-family: 'Droid+Serif', serif;
+    margin-top: 50px;
+}
+.jobtitle {
+    margin-top: 15px;
+    color: black;
+}
+.email {
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+}
+p {
+    color: black;
+}
+#reviewbutton {
+    background-color: green;
+    border: none;
 }
 .footer {
     height: 50px;
@@ -133,12 +184,6 @@ p {
     font-family: 'Lora', serif !important;
     font-size: 15px;
 }
-.test {
-    height: 20px;
-}
-.test2 {
-    height: 500px;
-}
 #subs {
     padding-top: 60px;
 }
@@ -148,6 +193,9 @@ p {
 }
 #subs3 {
     padding-bottom: 60px;
+}
+.test {
+    height: 500px;
 }
 
 

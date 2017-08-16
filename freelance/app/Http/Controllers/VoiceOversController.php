@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\academicwriters;
+use App\voiceovers;
 use Illuminate\Http\Request;
 
-class AcademicWritersController extends Controller
+class VoiceOversController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class AcademicWritersController extends Controller
      */
     public function index()
     {
-        return view('services.academicwriters', ['academicwriters' => academicwriters::all()]);
+        return view('services.voiceovers', ['voiceovers' => voiceovers::all()]);
 
     }
 
@@ -36,32 +36,32 @@ class AcademicWritersController extends Controller
      */
     public function store(Request $request)
     {
-        $new = new academicwriters();
+        $new = new voiceovers();
         $new->name = $request->get('name');
         $new->save();
 
-        return redirect(route('services.academicwriters'));
+        return redirect(route('services.voiceovers'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\academicwriters  $academicwriters
+     * @param  \App\voiceovers  $voiceovers
      * @return \Illuminate\Http\Response
      */
-    public function show(academicwriters $academicwriters)
+    public function show(voiceovers $voiceovers)
     {
-        $academicwriters = academicwriters::find($id);
-        return view('services.academicwriters', ['academicwriters' => $academicwriters]);
+        $voiceovers = voiceovers::find($id);
+        return view('services.voiceovers', ['voiceovers' => $voiceovers]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\academicwriters  $academicwriters
+     * @param  \App\voiceovers  $voiceovers
      * @return \Illuminate\Http\Response
      */
-    public function edit(academicwriters $academicwriters)
+    public function edit(voiceovers $voiceovers)
     {
         //
     }
@@ -70,10 +70,10 @@ class AcademicWritersController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\academicwriters  $academicwriters
+     * @param  \App\voiceovers  $voiceovers
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, academicwriters $academicwriters)
+    public function update(Request $request, voiceovers $voiceovers)
     {
         //
     }
@@ -81,10 +81,10 @@ class AcademicWritersController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\academicwriters  $academicwriters
+     * @param  \App\voiceovers  $voiceovers
      * @return \Illuminate\Http\Response
      */
-    public function destroy(academicwriters $academicwriters)
+    public function destroy(voiceovers $voiceovers)
     {
         //
     }

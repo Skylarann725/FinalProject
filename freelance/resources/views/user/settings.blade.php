@@ -31,7 +31,7 @@
                 </div>
                 <div class="form-group">
                     {!! Form::label('profile_title', 'Job Title') !!}
-                    {!! Form::select('profile_title', ['Web Development' => 'Web Development', 'Video Production' => 'Video Production', 'Business' => 'Business', 'Photography' => 'Photography', 'Writers' => 'Writer'],
+                    {!! Form::select('profile_title', ['Web & Design' => 'Web & Design', 'Video Production' => 'Video Production', 'Business' => 'Business', 'Photography' => 'Photography', 'Writing' => 'Writing', 'Music' => 'Music & Audio'],
                     $user->profile_title, ['class' => 'form-control']) !!}
                 </div>
                 <div class="form-group">
@@ -53,6 +53,10 @@
                 <div class="form-group">
                     {!! Form::label('profile_summary', 'Summary') !!}
                     {!! Form::text('profile_summary', $user->profile_summary, ['class' => 'form-control']) !!}
+                </div>
+                <div class="form-group">
+                    {!! Form::label('email', 'Email') !!}
+                    {!! Form::text('email', $user->email, ['class' => 'form-control']) !!}
                 </div>
                 <div class="form-group">
                     <button class="btn btn-info btn-block" type="submit">Save Info</button>

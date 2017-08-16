@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{URL::asset('css/style.css')}}">
-    <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Lora|Galada|Dancing+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Lora|Galada|Dancing+Script|Lobster" rel="stylesheet">
     {{--{!! MaterializeCSS::include_full() !!}--}}
 <!-- Compiled and minified CSS -->
     {{--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">--}}
@@ -42,16 +42,18 @@
                     </a>
                     {{--<a class="navbar-brand" id="services-tab" href="{{ url('/services') }}">Services</a>--}}
                     <div class="row" id="search">
-                    <div class="col-lg-6">
-                    <div class="input-group">
-                    <input type="text" class="form-control" id="search-input" placeholder="What services are you looking for?">
-                    <span class="input-group-btn">
-                    <button class="btn btn-default" id="search-btn" type="button">Search</button>
-                    </span>
-                    </div><!-- /input-group -->
-                    </div><!-- /.col-lg-6 -->
+                        <div class="col-lg-6">
+                            <div class="input-group">
+                                <input type="search" class="form-control" id="search-input" onkeyup="myFunction()" placeholder="What services are you looking for?">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" id="search-btn" type="button">Search</button>
+                                </span>
+                            </div><!-- /input-group -->
+                        </div><!-- /.col-lg-6 -->
                     </div><!-- /.row -->
                 </div>
+
+
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
@@ -101,5 +103,25 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script>
+        function myFunction() {
+            // Declare variables
+            var input, filter, ul, li, span, i;
+            input = document.getElementById('search-input');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("span")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </body>
 </html>

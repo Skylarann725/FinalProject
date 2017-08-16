@@ -51,7 +51,17 @@ Route::resource('/editors', 'EditorsController');
 Route::resource('/businesswriters', 'BusinessWritersController');
 Route::resource('/screenwriters', 'ScreenwritersController');
 Route::resource('/academicwriters', 'AcademicWritersController');
-
+Route::resource('/creativewriters', 'CreativeWritersController');
+Route::resource('/journalists', 'JournalistsController');
+Route::resource('/translators', 'TranslatorsController');
+Route::resource('/voice', 'VoiceController');
+Route::resource('/piano', 'PianoController');
+Route::resource('/guitar', 'GuitarController');
+Route::resource('/songwriters', 'SongwritersController');
+Route::resource('/soundeffects', 'SoundEffectsController');
+Route::resource('/voiceovers', 'VoiceOversController');
+Route::resource('/singers', 'SingersController');
+Route::resource('/mixing', 'MixingController');
 
 
 Route::group(['as' => 'user.'], function() {

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Eloquent\Status;
 use App\Services;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
@@ -42,6 +43,7 @@ class ProfileController extends Controller
                     $user->location_state = $request->input('location_state');
                     $user->skills = $request->input('skills');
                     $user->profile_summary = $request->input('profile_summary');
+                    $user->email = $request->input('email');
                     $user->save();
                     return redirect('/profile/' . Auth::user()->id);
                 }

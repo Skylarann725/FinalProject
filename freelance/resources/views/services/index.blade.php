@@ -25,42 +25,6 @@
                 <img src="{{$serv->photo}}" width="180" height="130">
                 <p>{{$serv->name}}</p>
                 </a>
-                {{--@if($serv->id === 1)--}}
-                {{--<a class="servpics" href="{{ url('/webdev') }}">--}}
-                    {{--<img src="{{$serv->photo}}" width="180" height="130">--}}
-                    {{--<p>{{$serv->name}}</p>--}}
-                {{--</a>--}}
-                    {{--@endif--}}
-                    {{--@if($serv->id === 2)--}}
-                        {{--<a class="servpics" href="{{ url('/videopro') }}">--}}
-                            {{--<img src="{{$serv->photo}}" width="180" height="130">--}}
-                            {{--<p>{{$serv->name}}</p>--}}
-                        {{--</a>--}}
-                    {{--@endif--}}
-                    {{--@if($serv->id === 3)--}}
-                        {{--<a class="servpics" href="{{ url('/business') }}">--}}
-                            {{--<img src="{{$serv->photo}}" width="180" height="130">--}}
-                            {{--<p>{{$serv->name}}</p>--}}
-                        {{--</a>--}}
-                    {{--@endif--}}
-                    {{--@if($serv->id === 4)--}}
-                        {{--<a class="servpics" href="{{ url('/photography') }}">--}}
-                            {{--<img src="{{$serv->photo}}" width="180" height="130">--}}
-                            {{--<p>{{$serv->name}}</p>--}}
-                        {{--</a>--}}
-                    {{--@endif--}}
-                    {{--@if($serv->id === 5)--}}
-                        {{--<a class="servpics" href="{{ url('/videopro') }}">--}}
-                            {{--<img src="{{$serv->photo}}" width="180" height="130">--}}
-                            {{--<p>{{$serv->name}}</p>--}}
-                        {{--</a>--}}
-                    {{--@endif--}}
-                    {{--@if($serv->id === 6)--}}
-                        {{--<a class="servpics" href="{{ url('/videopro') }}">--}}
-                            {{--<img src="{{$serv->photo}}" width="180" height="130">--}}
-                            {{--<p>{{$serv->name}}</p>--}}
-                        {{--</a>--}}
-                    {{--@endif--}}
             </div>
     @endforeach
     </div>
@@ -70,7 +34,7 @@
         <div class="row" id="how">
             <div class="col-md-4">
                 <h3>Find</h3>
-                <img src="{{URL::asset('img/find3.png')}}" alt="profile Pic" width="100">php
+                <img src="{{URL::asset('img/find3.png')}}" alt="profile Pic" width="100">
                 <br>
                 <br>
                 <p>Search through our services to find the expert that you need to get your job done right.
@@ -95,5 +59,4 @@
         </div>
     </div>
     <hr>
-    <div class="test"></div>
 @endsection
